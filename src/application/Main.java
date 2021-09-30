@@ -9,15 +9,19 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-	
+
 	@Override
-	public void start(Stage stage) {
+	public void start(Stage primaryStage) {
 		try {
-			Parent parent = FXMLLoader.load(getClass().getResource("/gui/View.fxml"));
-			Scene scene = new Scene(parent);
-			stage.setScene(scene);
-			stage.show();
-		} catch (IOException e) {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+			Parent parent = loader.load();
+			Scene mainScene = new Scene(parent);
+			primaryStage.setScene(mainScene);
+			primaryStage.setTitle("Sample JavaFX application - System ");
+			primaryStage.show();
+		} catch (
+
+		IOException e) {
 			e.printStackTrace();
 		}
 	}
