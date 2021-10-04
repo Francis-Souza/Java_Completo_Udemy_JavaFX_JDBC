@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 
-import db.DbException;
+import db.DbIntegrityException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Constraints;
@@ -80,7 +80,7 @@ public class DepartmentFormController implements Initializable {
 		catch(ValidationException e) {
 			setErrorMessages(e.getErrors());
 		}
-		catch (DbException e) {
+		catch (DbIntegrityException e) {
 			Alerts.showAlert("	Erros saving object", null, e.getMessage(), AlertType.ERROR);
 		}
 
