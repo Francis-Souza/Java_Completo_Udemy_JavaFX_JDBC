@@ -135,8 +135,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 	@Override
 	public List<Department> findAll() {
 		PreparedStatement st = null;
-		ResultSet rs = null;	
-		
+		ResultSet rs = null;			
 		
 		try {
 			st = conn.prepareStatement("select * from department");			

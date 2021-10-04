@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.entities.Department;
 import model.services.DepartmentService;
@@ -50,6 +51,10 @@ public class DepartmentListController implements Initializable {
 	}
 
 	private void inicializeNodes() {
+		
+		
+		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("Id"));
+		tableColumnNameDepartment.setCellValueFactory(new PropertyValueFactory<>("Name"));
 
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
