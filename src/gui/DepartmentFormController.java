@@ -72,7 +72,7 @@ public class DepartmentFormController implements Initializable {
 
 		try {
 			entity = getFormData();
-			service.saveOrUpdate(entity);
+			service.saveOrUpdateDepartment(entity);
 			notifyDataChangeListeners();
 			
 			Utils.currentStage(event).close();

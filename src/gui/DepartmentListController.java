@@ -135,7 +135,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	private void initEditButtons() {
 		tableColumnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
 		tableColumnEdit.setCellFactory(param -> new TableCell<Department, Department>() {
-			private final Button button = new Button("edit");
+			private final Button button = new Button("Edit");
 
 			@Override
 			protected void updateItem(Department obj, boolean empty) {
@@ -155,7 +155,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	private void initRemoveButtons() {
 		tableColumnRemove.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
 		tableColumnRemove.setCellFactory(param -> new TableCell<Department, Department>() {
-			private final Button button = new Button("remove");
+			private final Button button = new Button("Remove");
 
 			@Override
 			protected void updateItem(Department obj, boolean empty) {
@@ -180,7 +180,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 				throw new IllegalStateException("Service was null");
 			}
 			try {
-				serviceDepartment.remove(obj);
+				serviceDepartment.removeDepartment(obj);
 				updateTableView();
 			} catch (DbIntegrityException e) {
 				Alerts.showAlert("Error removing object", null, e.getMessage(), AlertType.ERROR);
