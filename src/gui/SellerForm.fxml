@@ -33,15 +33,20 @@
          <children>
             <Label text="Id" />
             <Label text="Name" GridPane.rowIndex="1" />
+            <Label text="Email" GridPane.rowIndex="2" />
+            <Label prefHeight="16.0" prefWidth="94.0" text="Base Salary" GridPane.rowIndex="4" />
+            <Label text="Department" GridPane.rowIndex="5" />
+            <Label text="BirthDate" GridPane.rowIndex="3" />
             <TextField fx:id="txtId" editable="false" prefHeight="24.0" prefWidth="78.0" GridPane.columnIndex="1" />
             <TextField fx:id="txtNameSeller" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="lblError" prefHeight="15.0" prefWidth="263.0" textFill="#c31616" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
+            <TextField fx:id="txtEmailSeller" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtbaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
-                  <Font size="12.0" />
-               </font></Label>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="comboBoxDepartment" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
                   <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onBtnSaveAction" text="Save" />
@@ -51,21 +56,34 @@
                   <Insets top="5.0" />
                </padding>
             </HBox>
-            <Label text="Email" GridPane.rowIndex="2" />
-            <TextField fx:id="txtEmailSeller" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtbaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label fx:id="lblError" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </TextField>
-            <ComboBox prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label prefHeight="16.0" prefWidth="94.0" text="Base Salary" GridPane.rowIndex="4" />
-            <Label text="Department" GridPane.rowIndex="5" />
-            <Label text="BirthDate" GridPane.rowIndex="3" />
-            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label fx:id="lblErrorEmail" prefHeight="15.0" prefWidth="263.0" textFill="#d70909" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="lblErrorBirthDate" prefHeight="15.0" prefWidth="263.0" textFill="#bc0808" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label fx:id="lblErrorBaseSalary" prefHeight="15.0" prefWidth="263.0" textFill="#da0a0a" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorEmail" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorBirthDate" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorBaseSalary" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
          </children>
       </GridPane>
    </children>
