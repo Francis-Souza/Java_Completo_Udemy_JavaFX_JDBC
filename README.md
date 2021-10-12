@@ -21,7 +21,7 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 * Eclipse com plugin do Java FX.
 * Driver de Conexão com banco de dados MySql
 * Instalação do Banco de dados MySql
-* Instalçao do Workbench para administração do banco de dados
+* Instalaçao do Workbench para administração do banco de dados
 * Controle de versão GIT instalado na sua máquina.
 * Conta no GitHub para o armazenamento do seu projeto na nuvem.
 
