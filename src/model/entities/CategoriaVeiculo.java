@@ -7,7 +7,7 @@ public class CategoriaVeiculo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Integer id;
-	private String NameCategory ;
+	private String nameCategory ;
 	
 	public CategoriaVeiculo() {
 		
@@ -15,7 +15,7 @@ public class CategoriaVeiculo implements Serializable {
 
 	public CategoriaVeiculo(Integer id, String nameCategory) {	
 		this.id = id;
-		NameCategory = nameCategory;
+		this.nameCategory = nameCategory;
 	}
 
 	public Integer getId() {
@@ -27,11 +27,11 @@ public class CategoriaVeiculo implements Serializable {
 	}
 
 	public String getNameCategory() {
-		return NameCategory;
+		return nameCategory;
 	}
 
 	public void setNameCategory(String nameCategory) {
-		NameCategory = nameCategory;
+		this.nameCategory = nameCategory;
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class CategoriaVeiculo implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CategoriaVeiculo [id=" + id + ", NameCategory=" + NameCategory + "]";
+		return "CategoriaVeiculo [id=" + id + ", NameCategory=" + nameCategory + "]";
 	}
 	
 	
