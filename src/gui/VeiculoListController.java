@@ -72,6 +72,7 @@ public class VeiculoListController implements Initializable, DataChangeListener 
 	@FXML
 	private TableColumn<Veiculo, Double> tableColumnPrice;	
 	
+	@SuppressWarnings("rawtypes")
 	@FXML
 	private TableColumn<Veiculo, Enum> tableColumnStateCar;	
 	
