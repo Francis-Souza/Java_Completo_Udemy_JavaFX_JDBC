@@ -165,7 +165,7 @@ public class SellerDaoJDBC implements SellerDao {
 			st = conn.prepareStatement("select a.*, a.Name as DepName " 
 		+ "from seller a "
 		+ "join department b on (a.DepartmentId = b.Id) "
-		+ "order by Name");
+		+ "order by a.id");
 			
 			rs = st.executeQuery();
 

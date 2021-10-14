@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="409.0" prefWidth="1387.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VeiculoListController">
+   <children>
+      <Label text="Veiculo Registration">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="1272.0">
+        <items>
+          <Button fx:id="btNewVeiculo" mnemonicParsing="false" onAction="#onBtNewVeiculoAction" text="New" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewVeiculo" prefHeight="272.0" prefWidth="1371.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="52.0" style="-fx-alignment: CENTER;" text="Id" />
+          <TableColumn fx:id="tableColumnNameVeiculo" prefWidth="185.0" text="Name" />
+            <TableColumn fx:id="tableColumnColorCar" prefWidth="105.0" style="-fx-alignment: CENTER;" text="Color" />
+            <TableColumn fx:id="tableColumnVersionCar" prefWidth="123.0" style="-fx-alignment: CENTER;" text="Version" />
+            <TableColumn fx:id="tableColumnBrandCar" prefWidth="128.0" style="-fx-alignment: CENTER;" text="Brand" />
+            <TableColumn fx:id="tableColumnFabricationDate" prefWidth="140.0" style="-fx-alignment: CENTER;" text="FabricationDate" />
+            <TableColumn fx:id="tableColumnBoardCar" prefWidth="106.0" style="-fx-alignment: CENTER;" text="Plate" />
+            <TableColumn fx:id="tableColumnFuelCar" prefWidth="107.0" style="-fx-alignment: CENTER;" text="Fuel" />
+            <TableColumn fx:id="tableColumnPrice" prefWidth="102.0" style="-fx-alignment: CENTER-RIGHT;" text="Price" />
+            <TableColumn fx:id="tableColumnStateCar" prefWidth="106.0" style="-fx-alignment: CENTER;" text="State" />
+            <TableColumn fx:id="tableColumnEdit" prefWidth="59.0" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="tableColumnRemove" prefWidth="99.0" style="-fx-alignment: CENTER;" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

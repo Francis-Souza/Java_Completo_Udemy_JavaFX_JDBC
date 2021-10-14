@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="393.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VeiculoFormController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="34.0" prefHeight="335.0" prefWidth="789.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="34.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="55.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="161.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="335.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Id" />
+            <Label text="Name" GridPane.rowIndex="1" />
+            <Label text="Color" GridPane.rowIndex="2" />
+            <Label text="Version" GridPane.rowIndex="3" />
+            <Label prefHeight="16.0" prefWidth="94.0" text="Brand" GridPane.rowIndex="4" />
+            <Label prefHeight="16.0" prefWidth="127.0" text="Fabrication Date" GridPane.rowIndex="5" />
+            <Label text="Plate" GridPane.rowIndex="6" />
+            <Label text="Fuel" GridPane.rowIndex="7" />
+            <Label text="Price" GridPane.rowIndex="8" />
+            <Label text="Category" GridPane.rowIndex="10" />
+            <Label text="State" GridPane.rowIndex="9" />
+            <TextField fx:id="txtId" editable="false" prefHeight="24.0" prefWidth="78.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNameVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtColorCar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtVersion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtBrand" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dpFabricationDate" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtPlate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtFuel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ComboBox fx:id="comboBoxState" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ComboBox fx:id="comboBoxCategoriaVeiculo" prefHeight="24.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <HBox prefHeight="50.0" prefWidth="273.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onBtnSaveAction" text="Save" />
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#onBtnCancelAction" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="lblError" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorColor" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorVersion" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lblErrorBrand" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorfabricationDate" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label fx:id="lblErrorPlate" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lblErrorFuel" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lblErrorPrice" prefHeight="15.0" prefWidth="263.0" textFill="#cd0404" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

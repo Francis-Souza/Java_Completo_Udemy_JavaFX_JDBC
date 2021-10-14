@@ -1,7 +1,7 @@
 package model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import model.entities.enums.EstadoVeiculoEnum;
 
@@ -14,8 +14,8 @@ public class Veiculo implements Serializable {
 	private String colorCar;
 	private String versionCar;
 	private String brandCar;
-	private Date frabricationCar;
-	private String bordCar;
+	private Date fabricationDate;
+	private String plateCar;
 	private String fuelCar;
 	private Double price;
 	private EstadoVeiculoEnum stateCar;
@@ -27,15 +27,15 @@ public class Veiculo implements Serializable {
 
 
 	public Veiculo(Integer id, String nameCar, String colorCar, String versionCar, String brandCar,
-			Date frabricationCar, String bordCar, String fuelCar, Double price, EstadoVeiculoEnum stateCar,
+			Date fabricationDate, String plateCar, String fuelCar, Double price, EstadoVeiculoEnum stateCar,
 			CategoriaVeiculo categoriaVeiculo) {		
 		this.id = id;
 		this.nameCar = nameCar;
 		this.colorCar = colorCar;
 		this.versionCar = versionCar;
 		this.brandCar = brandCar;
-		this.frabricationCar = frabricationCar;
-		this.bordCar = bordCar;
+		this.fabricationDate = fabricationDate;
+		this.plateCar = plateCar;
 		this.fuelCar = fuelCar;
 		this.price = price;
 		this.stateCar = stateCar;
@@ -84,20 +84,20 @@ public class Veiculo implements Serializable {
 		this.brandCar = brandCar;
 	}
 
-	public Date getFrabricationCar() {
-		return frabricationCar;
+	public Date getFabricationDate() {
+		return fabricationDate;
 	}
 
-	public void setFrabricationCar(Date frabricationCar) {
-		this.frabricationCar = frabricationCar;
+	public void setFabricationDate(Date fabricationDate) {
+		this.fabricationDate = fabricationDate;
 	}
 
-	public String getBordCar() {
-		return bordCar;
+	public String getPlateCar() {
+		return plateCar;
 	}
 
-	public void setBordCar(String bordCar) {
-		this.bordCar = bordCar;
+	public void setPlateCar(String plateCar) {
+		this.plateCar = plateCar;
 	}
 
 	public String getFuelCar() {
@@ -161,7 +161,7 @@ public class Veiculo implements Serializable {
 	@Override
 	public String toString() {
 		return "Veiculo [id=" + id + ", nameCar=" + nameCar + ", colorCar=" + colorCar + ", versionCar=" + versionCar
-				+ ", brandCar=" + brandCar + ", frabricationCar=" + frabricationCar + ", bordCar=" + bordCar
+				+ ", brandCar=" + brandCar + ", fabricationDate=" + fabricationDate + ", plateCar=" + plateCar
 				+ ", fuelCar=" + fuelCar + ", price=" + price + ", stateCar=" + stateCar + ", categoriaVeiculo="
 				+ categoriaVeiculo + "]";
 	}

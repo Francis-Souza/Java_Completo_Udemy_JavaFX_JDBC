@@ -26,13 +26,13 @@
       </ToolBar>
       <TableView fx:id="tableViewSeller" prefHeight="170.0" prefWidth="588.0">
         <columns>
-          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Id" />
           <TableColumn fx:id="tableColumnNameSeller" prefWidth="110.0" text="Name" />
-            <TableColumn fx:id="tableColumnEmail" prefWidth="180.0" text="Email" />
-            <TableColumn fx:id="tableColumnBirthDate" prefWidth="119.0" text="BirthDate" />
-            <TableColumn fx:id="tableColumnBaseSalary" prefWidth="113.0" text="Base Salary" />
-            <TableColumn fx:id="tableColumnEdit" prefWidth="55.0" />
-            <TableColumn fx:id="tableColumnRemove" prefWidth="86.0" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="180.0" style="-fx-alignment: CENTER;" text="Email" />
+            <TableColumn fx:id="tableColumnBirthDate" prefWidth="119.0" style="-fx-alignment: CENTER;" text="BirthDate" />
+            <TableColumn fx:id="tableColumnBaseSalary" prefWidth="113.0" style="-fx-alignment: CENTER-RIGHT;" text="Base Salary" />
+            <TableColumn fx:id="tableColumnEdit" prefWidth="55.0" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="tableColumnRemove" prefWidth="86.0" style="-fx-alignment: CENTER;" />
         </columns>
       </TableView>
    </children>

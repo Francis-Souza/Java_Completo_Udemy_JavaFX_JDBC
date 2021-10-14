@@ -32,7 +32,7 @@ public class VeiculoDaoJDBC implements VeiculoDao {
 		try {
 
 			st = conn.prepareStatement("insert into veiculos "
-					+ "(nameCar, colorCar, versionCar, brandCar, frabricationDate, boardCar, fuelCar, price, stateCar, categoryCarId) "
+					+ "(nameCar, colorCar, versionCar, brandCar, fabricationDate, plateCar, fuelCar, price, stateCar, categoryCarId) "
 					+ "values " 
 					+ "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
 					Statement.RETURN_GENERATED_KEYS);
@@ -41,8 +41,8 @@ public class VeiculoDaoJDBC implements VeiculoDao {
 			st.setString(2, veiculo.getColorCar());
 			st.setString(3, veiculo.getVersionCar());
 			st.setString(4, veiculo.getBrandCar());
-			st.setDate(5, new java.sql.Date(veiculo.getFrabricationCar().getTime()));
-			st.setString(6, veiculo.getBordCar());
+			st.setDate(5, new java.sql.Date(veiculo.getFabricationDate().getTime()));
+			st.setString(6, veiculo.getPlateCar());
 			st.setString(7, veiculo.getFuelCar());
 			st.setDouble(8, veiculo.getPrice());
 			st.setString(9, veiculo.getStateCar().name());
@@ -77,15 +77,15 @@ st.setInt(10, veiculo.getCategoriaVeiculo().getId());
 		try {
 
 			st = conn.prepareStatement("update veiculos "
-					+ "set nameCar = ?, colorCar = ?, versionCar = ?, brandCar = ?, frabricationDate = ?, boardCar = ?, fuelCar = ?, price = ?, stateCar = ?, categoryCarId = ? "					 
+					+ "set nameCar = ?, colorCar = ?, versionCar = ?, brandCar = ?, fabricationDate = ?, plateCar = ?, fuelCar = ?, price = ?, stateCar = ?, categoryCarId = ? "					 
 					+ "where id = ?");
 
 			st.setString(1, veiculo.getNameCar());
 			st.setString(2, veiculo.getColorCar());
 			st.setString(3, veiculo.getVersionCar());
 			st.setString(4, veiculo.getBrandCar());
-			st.setDate(5, new java.sql.Date(veiculo.getFrabricationCar().getTime()));
-			st.setString(6, veiculo.getBordCar());
+			st.setDate(5, new java.sql.Date(veiculo.getFabricationDate().getTime()));
+			st.setString(6, veiculo.getPlateCar());
 			st.setString(7, veiculo.getFuelCar());
 			st.setDouble(8, veiculo.getPrice());
 			st.setString(9, veiculo.getStateCar().name());
@@ -157,9 +157,9 @@ st.setInt(10, veiculo.getCategoriaVeiculo().getId());
 		car.setNameCar(rs.getString("nameCar"));
 		car.setColorCar(rs.getString("colorCar"));
 		car.setVersionCar(rs.getString("versionCar"));
-		car.setBrandCar(rs.getString("brandCar"));
-		car.setFrabricationCar(rs.getDate("frabricationDate"));
-		car.setBordCar(rs.getString("boardCar"));
+		car.setBrandCar(rs.getString("brandCar"));		
+		car.setFabricationDate(new java.util.Date(rs.getTimestamp("fabricationDate").getTime()));
+		car.setPlateCar(rs.getString("plateCar"));
 		car.setFuelCar(rs.getString("fuelCar"));
 		car.setPrice(rs.getDouble("price"));
 		car.setEstate(EstadoVeiculoEnum.valueOf(EstadoVeiculoEnum.class, rs.getString("stateCar").toUpperCase()));
@@ -184,7 +184,7 @@ st.setInt(10, veiculo.getCategoriaVeiculo().getId());
 			st = conn.prepareStatement("select a.*, b.nameCategory "
 					+ "from veiculos a "
 					+ "join category_cars b on (a.id = b.id)"
-					+ "order by nameCar");
+					+ "order by a.id");
 			rs = st.executeQuery();
 
 			List<Veiculo> list = new ArrayList<>();

@@ -142,7 +142,7 @@ public class CategoriaVeiculoDaoJDBC implements CategoriaVeiculoDao{
 		ResultSet rs = null;
 
 		try {
-			st = conn.prepareStatement("select * from category_cars");
+			st = conn.prepareStatement("select * from category_cars order by id");
 
 			rs = st.executeQuery();
 
