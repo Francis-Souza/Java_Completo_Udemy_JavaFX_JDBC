@@ -2,6 +2,10 @@
 
 <h2>Desenvolvendo um Sistema de Cadastro - Desenvolvido com API JAVA-FX </h2>
 
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
+
+<h3>DESCRIÇÃO DO PROJETO</h3>
+
 Pequeno sistema para o cadastro de vendedores, veículos, departamentos e categoria de veículos através da API JAVA-FX, criado com JAVA.
 
 Durante a sessão, serão desenvolvidos e abordados os seguintes tópicos:
@@ -13,13 +17,11 @@ Durante a sessão, serão desenvolvidos e abordados os seguintes tópicos:
 * Exportação do sistema para uso em Desktop
 
 
-
-
 São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido:
 
 * Java 8 ou versões superiores.
 * Eclipse com plugin do Java FX.
-* Driver de Conexão com banco de dados MySql
+* Driver de Conexão com banco de dados MySql 
 * Instalação do Banco de dados MySql
 * Instalaçao do Workbench para administração do banco de dados
 * Controle de versão GIT instalado na sua máquina.
@@ -35,7 +37,6 @@ Abaixo, seguem links bem bacanas, sobre tópicos mencionados:
 * [Site oficial do Workbench](https://www.mysql.com/products/workbench/)
 
 
-[Neste link](https://drive.google.com/file/d/1crVPOVl6ok2HeYjh3fjQuGQn2lDZVHrn/view?usp=sharing), seguem os slides apresentados como o roteiro utilizado para o desenvolvimento do projeto da nossa sessão.
 
 
 
