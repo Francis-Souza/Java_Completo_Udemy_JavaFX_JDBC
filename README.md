@@ -6,7 +6,7 @@
 
 <h3>DESCRIÇÃO DO PROJETO</h3>
 
-Pequeno sistema para o cadastro de vendedores, veículos, departamentos e categoria de veículos através da API JAVA-FX, criado com JAVA.
+Pequeno sistema para o cadastro de vendedores, veículos, departamentos e categoria de veículos através da API JAVA-FX.
 
 Durante a sessão, serão desenvolvidos e abordados os seguintes tópicos:
 
